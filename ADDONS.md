@@ -19,6 +19,18 @@ Start with the original README.md and SETUP.md, then come back here.
 5. Your Kraken API key needs **Withdraw funds** for `my_withdraw.py`, plus the trading permissions for swap/reprice.
 6. Right-click `open-terminal.ps1` > Run with PowerShell.
 
+## Withdrawals: use my_withdraw.py, not kraken.py withdraw
+The original tool's `withdraw` and `withdraw-addresses` commands look up your saved
+addresses with Kraken's older `WithdrawAddresses` call. For addresses saved on Kraken's
+current site that call can return **no addresses at all**, even when they are saved and
+email-confirmed, so the withdraw never finds your wallet.
+
+`my_withdraw.py` uses Kraken's newer Funding API (`/funding/v1/addresses`), which does see
+them. In the launcher, just type `withdraw`.
+
+Quick check (read-only, sends nothing): `python my_withdraw.py probe` lists the withdraw
+methods and saved addresses Kraken returns for each coin in your `wallets.json`.
+
 ## Safety
 - Everything is a dry run unless you do the live/send step and confirm it.
 - `wallets.json`, `.env` and `logs/` are in `.gitignore`. Never share them.
