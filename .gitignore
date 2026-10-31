@@ -17,3 +17,6 @@ __pycache__/
 
 # macOS
 .DS_Store
+
+# Add-ons: your own wallet addresses stay local
+wallets.json

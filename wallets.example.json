@@ -1,0 +1,18 @@
+{
+  "_readme": "Copy this file to wallets.json and put in YOUR OWN receive addresses. wallets.json is never shared (it is in .gitignore). 'name' must match the name you saved in Kraken's withdrawal address book exactly.",
+  "BTC": {
+    "name": "My Ledger BTC",
+    "method": "Bitcoin",
+    "address": "PUT-YOUR-BTC-ADDRESS-HERE"
+  },
+  "XRP": {
+    "name": "My Ledger XRP",
+    "method": "Ripple",
+    "address": "PUT-YOUR-XRP-ADDRESS-HERE"
+  },
+  "XLM": {
+    "name": "My Ledger XLM",
+    "method": "Stellar",
+    "address": "PUT-YOUR-XLM-ADDRESS-HERE"
+  }
+}
